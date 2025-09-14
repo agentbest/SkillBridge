@@ -1,187 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillBridge - 潜在能力発見型ダイレクトリクルーティング</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>株式会社エージェントベスト | IT・スタートアップ転職支援</title>
+    <meta name="description" content="IT系・スタートアップ転職に特化した人材紹介サービス。あなたの可能性を広げる隠れた優良求人をご紹介。個別交渉により、あなたの強みを活かした最適な転職を実現します。">
+    
+    <!-- CDN Links -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .gradient-bg-2 {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .gradient-bg-footer {
-            background: linear-gradient(135deg, #2d1b69 0%, #11998e 100%);
-        }
-        .hover-scale {
-            transition: transform 0.3s ease;
-        }
-        .hover-scale:hover {
-            transform: translateY(-5px);
-        }
-        .custom-shadow {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+JP:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-gray-50">
+<body class="font-sans bg-white">
     <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-2">
-                    <i class="fas fa-bridge text-purple-600 text-2xl"></i>
-                    <span class="text-2xl font-bold text-gray-800">SkillBridge</span>
+    <header class="bg-white shadow-md fixed w-full top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-blue-900">
+                    <i class="fas fa-rocket mr-2 text-blue-600"></i>
+                    エージェントベスト
                 </div>
-                
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#features" class="text-gray-700 hover:text-purple-600 font-medium">サービス特徴</a>
-                    <a href="#success" class="text-gray-700 hover:text-purple-600 font-medium">成功事例</a>
-                    <a href="#mechanism" class="text-gray-700 hover:text-purple-600 font-medium">仕組み</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium">採用担当者はこちら</a>
-                </nav>
-
-                <button class="bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-purple-700 transition duration-300" onclick="location.href='https://skillbridge.agent-best.net/register.html'">
-                    今すぐ登録
-                </button>
             </div>
-        </div>
+            <a href="https://calendly.com/r_matsuoka/meet-with-me" 
+               target="_blank"
+               class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <i class="fas fa-calendar-alt mr-2"></i>無料面談を予約
+            </a>
+        </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="gradient-bg text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
-                あなたの隠れた可能性を<br>
-                <span class="text-yellow-400">スタートアップで開花させませんか？</span>
-            </h1>
-            
-            <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-                自己評価の枠を超えて、スキル転用性とコミュニケーション能力を活かせる新しいキャリアを発見。<br>
-                SkillBridgeがあなたをイノベーティブな企業と繋げます。
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition duration-300" onclick="location.href='https://skillbridge.agent-best.net/register.html'">
-                    <i class="fas fa-user mr-2"></i>求職者として登録
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problem & Solution Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
-                なぜ多くの人材がチャンスを逃しているのか？
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-red-50 p-8 rounded-lg border-l-4 border-red-500 custom-shadow">
-                    <h3 class="text-xl font-bold mb-4 text-red-700">
-                        <i class="fas fa-exclamation-triangle mr-2"></i>現状の問題
-                    </h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-times text-red-500 mt-1 mr-3"></i>
-                            <span>学歴やIT経験を重視する従来の選考で、真の能力が見過ごされている</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-times text-red-500 mt-1 mr-3"></i>
-                            <span>「ITが苦手」という思い込みで、多くの優秀な人材が新しい挑戦を諦めている</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-times text-red-500 mt-1 mr-3"></i>
-                            <span>職種の垣根を超えたスキル転用の可能性が認識されていない</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-green-50 p-8 rounded-lg border-l-4 border-green-500 custom-shadow">
-                    <h3 class="text-xl font-bold mb-4 text-green-700">
-                        <i class="fas fa-lightbulb mr-2"></i>SkillBridgeの解決策
-                    </h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>スキル転用性に着目した独自のマッチングで、潜在能力を発掘</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>学歴や従来のスキルに頼らない、新しい評価軸でのキャリア提案</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
-                            <span>ルート営業→エンタープライズセールスなど、具体的な転職成功事例を基にした提案</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Success Stories Section -->
-    <section id="success" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
-                実際の転職成功事例
-            </h2>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg custom-shadow hover-scale">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-car text-blue-600 text-2xl"></i>
-                        </div>
-                        <h3 class="font-bold text-lg">営業職転職成功</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">
-                        地方でのルート営業経験を活かし、IT企業のエンタープライズセールスに転職。
-                        顧客との信頼関係構築スキルが高く評価されました。
+    <section class="pt-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen flex items-center">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                            あなたの可能性を
+                        </span><br>
+                        最大限に引き出す<br>
+                        IT・スタートアップ転職
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        公募では知ることのできない隠れた優良求人を厳選してご紹介。<br>
+                        個別交渉による条件調整で、あなたの理想のキャリアを実現します。
                     </p>
-                    <div class="text-center">
-                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                            年収150万円アップ
-                        </span>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://calendly.com/r_matsuoka/meet-with-me" 
+                           target="_blank"
+                           class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center">
+                            <i class="fas fa-calendar-alt mr-2"></i>無料面談を予約する
+                        </a>
+                        <a href="#success-stories" 
+                           class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-blue-600 hover:text-blue-600 transition-all duration-300 text-center">
+                            <i class="fas fa-chart-line mr-2"></i>転職成功事例を見る
+                        </a>
                     </div>
                 </div>
-                
-                <div class="bg-white p-6 rounded-lg custom-shadow hover-scale">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-graduation-cap text-green-600 text-2xl"></i>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-all duration-500">
+                            <div class="text-center">
+                                <div class="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                                    <i class="fas fa-handshake text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-4">個別面談で理想を実現</h3>
+                                <p class="text-gray-600">
+                                    あなたの経験・スキル・希望を詳しくヒアリング。<br>
+                                    一人ひとりに最適化された転職プランをご提案します。
+                                </p>
+                            </div>
                         </div>
-                        <h3 class="font-bold text-lg">教育系転職</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">
-                        学校事務の経験から、EdTechスタートアップのカスタマーサクセスへ。
-                        教育現場の理解と丁寧なコミュニケーション能力が決め手となりました。
-                    </p>
-                    <div class="text-center">
-                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                            キャリアチェンジ成功
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="bg-white p-6 rounded-lg custom-shadow hover-scale">
-                    <div class="text-center mb-4">
-                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-building text-purple-600 text-2xl"></i>
-                        </div>
-                        <h3 class="font-bold text-lg">公務員転職</h3>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-4">
-                        市役所での住民対応経験を活かし、GovTechスタートアップの事業開発職へ。
-                        行政への理解と課題解決思考が高く評価されました。
-                    </p>
-                    <div class="text-center">
-                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                            新しい挑戦
-                        </span>
                     </div>
                 </div>
             </div>
@@ -189,206 +82,245 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
-                SkillBridgeの特徴
-            </h2>
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    なぜエージェントベストが<br>
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">選ばれるのか</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    IT・スタートアップ業界に特化した豊富なネットワークと実績で、<br>
+                    あなたの転職を成功に導きます
+                </p>
+            </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 hover-scale">
-                    <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-search text-blue-600 text-3xl"></i>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <!-- Feature 1 -->
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-eye text-white text-xl"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-3">スキル転用性発掘</h3>
-                    <p class="text-gray-600 text-sm">
-                        従来見落とされがちなスキルの転用可能性を独自の視点で発掘し、新しいキャリアパスを提案します。
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">隠れた優良求人</h3>
+                    <p class="text-gray-600">
+                        公募では知ることのできない非公開求人を多数保有。条件の良い隠れた優良企業をご紹介します。
                     </p>
                 </div>
-                
-                <div class="text-center p-6 hover-scale">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-comments text-green-600 text-3xl"></i>
+
+                <!-- Feature 2 -->
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-comments text-white text-xl"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-3">コミュニケーション重視</h3>
-                    <p class="text-gray-600 text-sm">
-                        技術力だけでなく、コミュニケーション能力や人間性を重視する企業との最適なマッチングを実現します。
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">個別交渉による条件調整</h3>
+                    <p class="text-gray-600">
+                        あなたの強みが企業のニーズとマッチする場合、給与や条件面での個別交渉を実施。書類通過実績も豊富です。
                     </p>
                 </div>
-                
-                <div class="text-center p-6 hover-scale">
-                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-chart-line text-yellow-600 text-3xl"></i>
+
+                <!-- Feature 3 -->
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-rocket text-white text-xl"></i>
                     </div>
-                    <h3 class="font-bold text-lg mb-3">成長機会の提供</h3>
-                    <p class="text-gray-600 text-sm">
-                        スタートアップならではの成長環境で、これまでの経験を活かしながら新しいスキルを身につけられます。
-                    </p>
-                </div>
-                
-                <div class="text-center p-6 hover-scale">
-                    <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-handshake text-purple-600 text-3xl"></i>
-                    </div>
-                    <h3 class="font-bold text-lg mb-3">ダイレクトマッチング</h3>
-                    <p class="text-gray-600 text-sm">
-                        イノベーション重視の企業と直接つながり、従来の転職市場では出会えない機会を提供します。
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">IT・スタートアップ特化</h3>
+                    <p class="text-gray-600">
+                        IT業界とスタートアップに特化した専門知識と豊富なネットワークで、最適なキャリアパスをご提案します。
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How it Works Section -->
-    <section id="mechanism" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
-                サービスの仕組み
-            </h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-lg p-8 custom-shadow">
-                    <h3 class="text-2xl font-bold mb-6 text-green-700">
-                        <i class="fas fa-user mr-3"></i>求職者向け
-                    </h3>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">1</div>
-                            <div>
-                                <h4 class="font-semibold text-lg">プロフィール作成</h4>
-                                <p class="text-gray-600">従来のスキルだけでなく、経験や人柄も含めた包括的なプロフィールを作成します。</p>
-                            </div>
+    <!-- Success Stories Section -->
+    <section id="success-stories" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">転職成功事例</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    様々な背景の方々が、理想のキャリアを実現しています
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Success Story 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user-tie text-white"></i>
                         </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">2</div>
-                            <div>
-                                <h4 class="font-semibold text-lg">スキル分析</h4>
-                                <p class="text-gray-600">独自の分析手法で、あなたのスキルの転用可能性を発見し、新しいキャリアを提案します。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">3</div>
-                            <div>
-                                <h4 class="font-semibold text-lg">企業検索</h4>
-                                <p class="text-gray-600">あなたの価値観と成長意欲にマッチする、革新的なスタートアップを探すことができます。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">4</div>
-                            <div>
-                                <h4 class="font-semibold text-lg">ダイレクトオファー受信</h4>
-                                <p class="text-gray-600">企業から直接スカウトを受け取り、従来の転職活動では出会えない機会を獲得できます。</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1">5</div>
-                            <div>
-                                <h4 class="font-semibold text-lg">転職サポート</h4>
-                                <p class="text-gray-600">面接から入社まで、専門のコンサルタントが転職活動を総合的にサポートします。</p>
-                            </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">50代・男性</h3>
+                            <p class="text-sm text-gray-600">コンサル経験者</p>
                         </div>
                     </div>
+                    <p class="text-gray-700 mb-4">
+                        長年コンサルティング業界で活躍してきたものの、50代に入り「本当に自分がやりたいことは何か」を改めて考え直すタイミングに。
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        年齢のハンデから転職活動は容易ではなかったが、経験を活かしつつ柔軟な働き方ができる企業と出会い、見事にキャリアの新しい一歩を踏み出すことができた。
+                    </p>
+                    <div class="text-blue-600 font-semibold">
+                        <i class="fas fa-check-circle mr-2"></i>キャリアチェンジ成功
+                    </div>
+                </div>
+
+                <!-- Success Story 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-user-graduate text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">20代・女性</h3>
+                            <p class="text-sm text-gray-600">未経験からのキャリア転換</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        営業職からマーケティング職へのキャリアチェンジを目指していたが、未経験という壁に阻まれていた。
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        しかしスタートアップのSaaS企業との出会いをきっかけに、自身のポテンシャルと成長意欲を高く評価され、念願のキャリア転換に成功。現在はマーケターとして新しい領域で活躍している。
+                    </p>
+                    <div class="text-purple-600 font-semibold">
+                        <i class="fas fa-check-circle mr-2"></i>未経験転職成功
+                    </div>
+                </div>
+
+                <!-- Success Story 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-balance-scale text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-900">30代・男性</h3>
+                            <p class="text-sm text-gray-600">ワークライフバランス重視</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">
+                        結婚をきっかけに「挑戦的で面白い仕事」と「家庭との両立」の両方を叶えたいと考え、転職を決意。
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        リモートワークを柔軟に取り入れているスタートアップ企業に入社し、成長できる環境と生活のバランスを実現した。
+                    </p>
+                    <div class="text-green-600 font-semibold">
+                        <i class="fas fa-check-circle mr-2"></i>両立実現成功
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Companies Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">取引企業事例</span>
+                </h2>
+                <p class="text-xl text-gray-600">
+                    様々なステージの優良企業とのネットワークを活用
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-building text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">上場企業コンサル</h3>
+                    <p class="text-sm text-gray-600">安定性と成長性を兼ね備えた大手企業</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">シリーズBスタートアップ</h3>
+                    <p class="text-sm text-gray-600">急成長フェーズの革新的企業</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">ミドルベンチャー</h3>
+                    <p class="text-sm text-gray-600">成熟した事業基盤を持つ成長企業</p>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 text-center">
+                    <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-seedling text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-900 mb-2">シードスタートアップ</h3>
+                    <p class="text-sm text-gray-600">革新的なアイデアを持つ初期段階企業</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="gradient-bg-2 text-white py-16">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold mb-6">
-                あなたの可能性は、想像以上に広がっています
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">
+                あなたの可能性を最大化する<br>
+                転職を始めませんか？
             </h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">
-                自分では気づいていない能力を発見し、新しいキャリアの扉を開きませんか？<br>
-                SkillBridgeで、あなたの真の価値に気づく企業と出会えます。
+            <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                無料面談では、あなたのキャリアの悩みや希望を詳しくお聞きし、<br>
+                最適な転職プランをご提案いたします。お気軽にご相談ください。
             </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="bg-yellow-400 text-gray-900 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-yellow-300 transition duration-300" onclick="location.href='https://skillbridge.agent-best.net/register.html'">
-                    <i class="fas fa-rocket mr-2"></i>無料で登録する
-                </button>
-            </div>
-            
-            <p class="mt-6 text-sm opacity-80">
-                登録後、あなたのスキルに興味を持った企業からオファーが届きます<br>
-                ご質問やご不明な点がございましたら、お気軽にお問い合わせください
-            </p>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-8 text-gray-800">採用担当者の方へ</h2>
-            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-                潜在能力の高い人材をお探しの企業様、SkillBridgeの独自のマッチング手法で<br>
-                これまでにない優秀な人材と出会いませんか？
-            </p>
-            <button class="bg-purple-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-purple-700 transition duration-300">
-                <i class="fas fa-envelope mr-2"></i>お問い合わせ
-            </button>
+            <a href="https://calendly.com/r_matsuoka/meet-with-me" 
+               target="_blank"
+               class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <i class="fas fa-calendar-alt mr-2"></i>今すぐ無料面談を予約する
+            </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="gradient-bg-footer text-white py-12">
-        <div class="container mx-auto px-4">
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <i class="fas fa-bridge text-2xl"></i>
-                        <span class="text-2xl font-bold">SkillBridge</span>
+                    <div class="text-2xl font-bold mb-4">
+                        <i class="fas fa-rocket mr-2 text-blue-400"></i>
+                        エージェントベスト
                     </div>
-                    <p class="text-gray-300 mb-4">
-                        潜在能力発掘型ダイレクトリクルーティングサービス
-                    </p>
-                    <p class="text-sm text-gray-400">
-                        あなたの可能性を発見し、新しいキャリアへの架け橋となるサービス
+                    <p class="text-gray-400 mb-4">
+                        IT・スタートアップ転職に特化した人材紹介サービス
                     </p>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">求職者向け</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white transition duration-300">プロフィール作成</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">スキル分析</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">企業検索</a></li>
-                    </ul>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <div class="text-gray-400 space-y-2">
+                        <p><i class="fas fa-building mr-2"></i>株式会社エージェントベスト</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>東京都港区六本木4丁目8-7<br>六本木嶋田ビル5階</p>
+                    </div>
                 </div>
                 
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">サポート</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="#" class="hover:text-white transition duration-300">よくある質問</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">利用規約</a></li>
-                        <li><a href="#" class="hover:text-white transition duration-300">プライバシーポリシー</a></li>
-                        <li><a href="#contact" class="hover:text-white transition duration-300">お問い合わせ</a></li>
-                    </ul>
+                    <h3 class="text-lg font-semibold mb-4">お問い合わせ</h3>
+                    <a href="https://calendly.com/r_matsuoka/meet-with-me" 
+                       target="_blank"
+                       class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
+                        <i class="fas fa-calendar-alt mr-2"></i>面談予約
+                    </a>
                 </div>
             </div>
             
-            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2024 SkillBridge. All rights reserved.
-                </p>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 株式会社エージェントベスト All rights reserved.</p>
             </div>
         </div>
     </footer>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"96f1f25f58a8d3f3","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97ed305c0bf2d4ae","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
-    <script id="html_badge_script1">
-        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDqExlWnJ7wyxtRn2yxpLBbRMTfPbiQdLGAfcjbpHbVwuoMlsh5R3mw7%2FCDwZ7Bph1sgMEMKS2PuFQRK8WJwJxK2PoymfYalKoo4C4I8VblG%2FHWz5SxTO5BrRzpLnIbBRg5LbaZ5icYATudFJYJKsE%2B5K%2BFZTuq9XHuzZkbF2QPpAxYZ97%2FHJWeQ5X3GmvpgAZcAzXZvoha1Ck7dnH%2BkjwddIs%2FNtXiPT29K7sOqIn2lDKskV4hTaefdCIS%2FO1fnVo7wa6OvZSHYAxG42ZNTKOHPqBqRmd3t%2FwbrxXD43G1JAcMRExlqUYMxYZTlmMaCMVKegN4QxgymcF9ETfnwjieGQfjncRVoh%2FeXrNFX6A8UnGng748WQHZFojclwBHANM2AryB0LCvy%2Fxq4iFTsSRDegutCl%2B9ITVb1KWFor2yy5aCorA28LY7Rhh%2FuEJBHiyLRxfao9jUDxy3Sv00DHfonQRsoWopZnPmPhAXThPIxRis31%2FECBdoM7d1DR9q9VYw%3D%3D";
-        window.__genspark_locale = "ja-JP";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDqExlWnJ7wyxtRn2yxpLBbRMTfPbiQdLGAfcjbpHbVwuoMlsh5R3mw7/CDwZ7Bph1sgMEMKS2PuFQRK8WJwJxK2PoymfYalKoo4C4I8VblG/HWz5SxTO5BrRzpLnIbBRg5LbaZ5icYATudFJYJKsE+5K+FZTuq9XHuzZkbF2QPpAxYZ97/HJWeQ5X3GmvpgAZcAzXZvoha1Ck7dnH+kjwddIs/NtXiPT29K7sOqIn2lDKskV4hTaefdCIS/O1fnVo7wa6OvZSHYAxG42ZNTKOHPqBqRmd3t/wbrxXD43G1JAcMRExlqUYMxYZTlmMaCMVKegN4QxgymcF9ETfnwjieGQfjncRVoh/eXrNFX6A8UnGng748WQHZFojclwBHANM2AryB0LCvy/xq4iFTsSRDegutCl+9ITVb1KWFor2yy5aCorA28LY7Rhh/uEJBHiyLRxfao9jUDxy3Sv00DHfonQRsoWopZnPmPhAXThPIxRis31/ECBdoM7d1DR9q9VYw==";
-    </script>
-    
-    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
-    
